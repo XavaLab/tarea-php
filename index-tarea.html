@@ -25,7 +25,8 @@
   
 
 
-  <!--NAVBAR-->
+
+  <!--NAVBAR
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -44,146 +45,278 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
-  <!--Seccion-->
-  <div class="container-fluid p-5 bg-primary text-white text-center bg-info bg-opacity-90">
-    <img src="img/Imagen1.png" height="200px">
-        <p class="fw-bolder text-white-50 fs-5">Cómete el mundo</p> 
-  </div>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-success navbar-dark ">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
 
-  <!--Cards-->
-    <div class="card-group">
-      <div class="card">
-        <img src="img/fideos.jpg" class="card-img-top" height="275px" width="200px" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Fideos con salsa</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ut ratione voluptatem tempore nulla provident quis in pariatur deleniti esse aspernatur consectetur nobis inventore, a laboriosam fuga illo? Porro, quas odio.</p>
-        </div>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Comida Facilita</a>
 
-      </div>
-      <div class="card">
-        <img src="img/MARUCHAN.jpg" height="275px" class="card-img-top" width="200px" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Maruchan</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima, mollitia molestiae consequuntur explicabo reiciendis ea a debitis ad, assumenda possimus laboriosam. Libero dicta, et mollitia, tempore deleniti cumque eveniet.</p>
-        </div>
-
-      </div>
-      <div class="card">
-        <img src="img/hotdog.png" height="275px" class="card-img-top" width="200" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Hot-Dog</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-
-      </div>
-    </div>
-  <!--CARRUSEL-->
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/Diapositiva1.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/Diapositiva2.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/Diapositiva3.PNG" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="index-tarea.html">Home</a>
+        </li>
+
+      </ul>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+
+      </ul>
+
+        <li class="nav-item">
+          <a class="nav-link" href="formulario.html">Login</a>
+        </li>
+
+      </ul>
+
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">Nosotros</a>
+        </li>
+
+      </ul>
+
+      <!-- Icons -->
+      <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+      </ul>
+
+      <!-- Search -->
+      <form class="w-auto">
+        <input type="search" class="form-control" placeholder="Type query" aria-label="Search">
+      </form>
+
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="img/Diapositiva1.PNG" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Quienes somos?</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="img/Diapositiva2.PNG" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Que nos gusta?</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/Diapositiva3.PNG" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Que proponemos?</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  <!--cards-->
+
+  <div class="container">
+    <div class="row ">
+
+      <div class="col-md-6">
+
+        <div class="card  " style="background-color:#9fa6db;">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the
+              card's content.
+            </p>
+
+            <button type="button" class="btn btn-primary">Button</button>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="card border border-primary shadow-0 " style="background-color:#e7d0d0;">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the
+              card's content.
+            </p>
+
+            <button type="button" class="btn btn-primary">Button</button>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+</div>
+
+  <div class="container">
+    <div class="row gx-5 ">
+
+      <div class="col-lg-3 col-md-6">
+
+        as
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        as
+
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        as
+
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+
+        as
+        
+
+      </div>
+
+    </div>
   </div>
 
- <!--footer-->
-<!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
 
-  <footer class="bg-light text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #3b5998;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
+<!-- Footer -->
+<footer class="bg-success text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
 
-        <!-- Twitter -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #55acee;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
-        <!-- Google -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #dd4b39;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-google"></i
-        ></a>
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
 
-        <!-- Instagram -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #ac2bac;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
 
-        <!-- Linkedin -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #0082ca;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-        <!-- Github -->
-        <a
-          class="btn btn-primary btn-floating m-1"
-          style="background-color: #333333;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="...">XAVA.lab</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-    
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <!-- Github -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+btn btn-outline-light mb-4
+
   </div>
-  <!-- End of .container -->
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
