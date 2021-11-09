@@ -89,7 +89,7 @@
   
             <div class="mb-3">
             <label for="Edad" class="form-label">Edad</label>
-            <input type="text" min="1" max="120" class="form-control" name="Edad" id="Edad">
+            <input type="number" min="1" max="120" class="form-control" name="Edad" id="Edad">
             </div>
   
             <div class="mb-3">
@@ -106,38 +106,43 @@
           </form>
         </div>
 
-        <div class="col-md-8">
-          <table class="table">
-              <thread class="table-sucess table-striped">
-                <tr>
-                  <th>Nombre</th>
-                  <th>Apellidos</th>
-                  <th>Género</th>
-                  <th>Dirección</th>
-                  <th>Edad</th>
-                  <th>Fecha Nacimiento</th>
-                  <th>RUT</th>
-                </tr>
-              </thread>
+		<div class="col-md-8">
+			<table class="table" >
+				<thead class="table-success table-striped" >
+					<tr>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Género</th>
+						<th>Dirección</th>
+						<th>Edad</th>
+						<th>Fecha de Nacimiento</th>
+						<th>RUT</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
 
-						<tbody>
-                                        <?php
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
-                                            <tr>
-                                                <th><?php  echo $row['cod_estudiante']?></th>
-                                                <th><?php  echo $row['dni']?></th>
-                                                <th><?php  echo $row['nombres']?></th>
-                                                <th><?php  echo $row['apellidos']?></th>    
-                                                <th><a href="actualizar.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
-                                            </tr>
-                                        <?php 
-                                            }
-                                        ?>
-						</tbody>
-          </table>
-        </div>
+				<tbody>
+						<?php
+							while($row=mysqli_fetch_array($query)){
+						?>
+							<tr>
+								<th><?php  echo $row['Nombre']?></th>
+								<th><?php  echo $row['Apellidos']?></th>
+								<th><?php  echo $row['Sexo']?></th>
+								<th><?php  echo $row['Direccion']?></th>
+								<th><?php  echo $row['Edad']?></th>
+								<th><?php  echo $row['FNacimiento']?></th>
+								<th><?php  echo $row['RUT']?></th>  
+								<th><a href="actualizar.php?id=<?php echo $row['RUT'] ?>" class="btn btn-info">Editar</a></th>
+								<th><a href="delete.php?id=<?php echo $row['RUT'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+							</tr>
+						<?php 
+							}
+						?>
+				</tbody>
+			</table>
+		</div>
 
       </div>
     </div> 

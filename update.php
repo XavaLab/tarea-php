@@ -2,6 +2,7 @@
 include("conexion.php");
 $con=conectar();
 
+
 $Nombre=$_POST['Nombre'];
 $Apellidos=$_POST['Apellidos'];
 $Sexo=$_POST['Sexo'];
