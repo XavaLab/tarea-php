@@ -1,8 +1,16 @@
+<?php
+	include("conexion.php");
+	$con=conectar();
 
+	$sql="SELECT * FROM tabla";
+	$query=mysqli_query($con,$sql);
 
-<!doctype html>
+	$row=mysqli_fetch_array($query);
+?>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +30,9 @@
 
     <title>&#129386 Registro</title>
   </head>
-  <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+<body>
+	    <!--Navbar-->
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
         <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
@@ -54,41 +62,41 @@
 
     <!--formulario-->
     <div class="container">
-      <form>
+      <form action="insertar.php" method="POST">
         <div class="mb-3">
-          <label for="nameimput" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nameimput">
+          <label for="Nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="Nombre" id="Nombre">
         </div>
 
         <div class="mb-3">
-          <label for="surnameimput" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="surnameimput">
+          <label for="Apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" name="Apellidos" id="Apellidos">
+        </div>
+		
+		<div class="mb-3">
+          <label for="Sexo" class="form-label">Género</label>
+          <input type="text" class="form-control" name="Sexo" id="Sexo">
         </div>
 
         <div class="mb-3">
-          <label for="adressimput" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="adressimput">
+          <label for="Direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" name="Direccion" id="Direccion">
+        </div>
+
+		<div class="mb-3">
+          <label for="Edad" class="form-label">Edad</label>
+          <input type="text" min="1" max="120" class="form-control" name="Edad" id="Edad">
+        </div>
+
+		<div class="mb-3">
+          <label for="FNacimiento" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" name="FNacimiento" id="FNacimiento">
         </div>
 
         <div class="mb-3">
-          <label for="rutimput" class="form-label">RUT o Identificación</label>
-          <input type="text" class="form-control" id="rutimput">
+          <label for="RUT" class="form-label">RUT o Identificación</label>
+          <input type="text" class="form-control" name="RUT" id="RUT">
         </div>        
-
-        <div class="mb-3">
-          <label for="dateimput" class="form-label">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="dateimput">
-        </div>
-
-        <div class="mb-3">
-          <label for="genderimput" class="form-label">Género</label>
-          <input type="text" class="form-control" id="genderimput">
-        </div>
-
-        <div class="mb-3">
-          <label for="ageimput" class="form-label">Edad</label>
-          <input type="text" min="1" max="120" class="form-control" id="ageimput">
-        </div>
 
         <button type="submit" class="btn btn-primary">Registrar</button>
       </form>
@@ -186,6 +194,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
 </html>
-<!--Javier Pastén Salinas XAVA.lab-->
