@@ -61,46 +61,86 @@
 
 
     <!--formulario-->
-    <div class="container">
-      <form action="insertar.php" method="POST">
-        <div class="mb-3">
-          <label for="Nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="Nombre" id="Nombre">
+
+	<div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-3">
+          <form action="insertar.php" method="POST">
+            <div class="mb-3">
+            <label for="Nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="Nombre" id="Nombre">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" name="Apellidos" id="Apellidos">
+            </div>
+            
+            <div class="mb-3">
+            <label for="Sexo" class="form-label">Género</label>
+            <input type="text" class="form-control" name="Sexo" id="Sexo">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" name="Direccion" id="Direccion">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Edad" class="form-label">Edad</label>
+            <input type="text" min="1" max="120" class="form-control" name="Edad" id="Edad">
+            </div>
+  
+            <div class="mb-3">
+            <label for="FNacimiento" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" name="FNacimiento" id="FNacimiento">
+            </div>
+  
+            <div class="mb-3">
+            <label for="RUT" class="form-label">RUT o Identificación</label>
+            <input type="text" class="form-control" name="RUT" id="RUT">
+            </div>        
+  
+          <button type="submit" class="btn btn-primary">Registrar</button>
+          </form>
         </div>
 
-        <div class="mb-3">
-          <label for="Apellidos" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" name="Apellidos" id="Apellidos">
-        </div>
-		
-		<div class="mb-3">
-          <label for="Sexo" class="form-label">Género</label>
-          <input type="text" class="form-control" name="Sexo" id="Sexo">
+        <div class="col-md-8">
+          <table class="table">
+              <thread class="table-sucess table-striped">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Género</th>
+                  <th>Dirección</th>
+                  <th>Edad</th>
+                  <th>Fecha Nacimiento</th>
+                  <th>RUT</th>
+                </tr>
+              </thread>
+
+						<tbody>
+                                        <?php
+                                            while($row=mysqli_fetch_array($query)){
+                                        ?>
+                                            <tr>
+                                                <th><?php  echo $row['cod_estudiante']?></th>
+                                                <th><?php  echo $row['dni']?></th>
+                                                <th><?php  echo $row['nombres']?></th>
+                                                <th><?php  echo $row['apellidos']?></th>    
+                                                <th><a href="actualizar.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            </tr>
+                                        <?php 
+                                            }
+                                        ?>
+						</tbody>
+          </table>
         </div>
 
-        <div class="mb-3">
-          <label for="Direccion" class="form-label">Dirección</label>
-          <input type="text" class="form-control" name="Direccion" id="Direccion">
-        </div>
-
-		<div class="mb-3">
-          <label for="Edad" class="form-label">Edad</label>
-          <input type="text" min="1" max="120" class="form-control" name="Edad" id="Edad">
-        </div>
-
-		<div class="mb-3">
-          <label for="FNacimiento" class="form-label">Fecha de nacimiento</label>
-          <input type="date" class="form-control" name="FNacimiento" id="FNacimiento">
-        </div>
-
-        <div class="mb-3">
-          <label for="RUT" class="form-label">RUT o Identificación</label>
-          <input type="text" class="form-control" name="RUT" id="RUT">
-        </div>        
-
-        <button type="submit" class="btn btn-primary">Registrar</button>
-      </form>
-    </div>
+      </div>
+    </div> 
     <!--footer-->
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">

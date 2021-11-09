@@ -53,46 +53,74 @@
 
 
     <!--formulario-->
-    <div class="container">
-      <form>
-        <div class="mb-3">
-          <label for="nameimput" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nameimput">
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-3">
+          <form action="insertar.php" method="POST">
+            <div class="mb-3">
+            <label for="Nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="Nombre" id="Nombre">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" name="Apellidos" id="Apellidos">
+            </div>
+            
+            <div class="mb-3">
+            <label for="Sexo" class="form-label">Género</label>
+            <input type="text" class="form-control" name="Sexo" id="Sexo">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" name="Direccion" id="Direccion">
+            </div>
+  
+            <div class="mb-3">
+            <label for="Edad" class="form-label">Edad</label>
+            <input type="text" min="1" max="120" class="form-control" name="Edad" id="Edad">
+            </div>
+  
+            <div class="mb-3">
+            <label for="FNacimiento" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" name="FNacimiento" id="FNacimiento">
+            </div>
+  
+            <div class="mb-3">
+            <label for="RUT" class="form-label">RUT o Identificación</label>
+            <input type="text" class="form-control" name="RUT" id="RUT">
+            </div>        
+  
+          <button type="submit" class="btn btn-primary">Registrar</button>
+          </form>
         </div>
 
-        <div class="mb-3">
-          <label for="surnameimput" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="surnameimput">
+        <div class="col-md-8">
+          <table class="table">
+              <thread class="table-sucess table-striped">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Género</th>
+                  <th>Dirección</th>
+                  <th>Edad</th>
+                  <th>Fecha Nacimiento</th>
+                  <th>RUT</th>
+                </tr>
+              </thread>
+
+              <tbody>
+                <th></th>
+                <th></th>
+
+              </tbody>
+          </table>
         </div>
 
-        <div class="mb-3">
-          <label for="adressimput" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="adressimput">
-        </div>
-
-        <div class="mb-3">
-          <label for="rutimput" class="form-label">RUT o Identificación</label>
-          <input type="text" class="form-control" id="rutimput">
-        </div>        
-
-        <div class="mb-3">
-          <label for="dateimput" class="form-label">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="dateimput">
-        </div>
-
-        <div class="mb-3">
-          <label for="genderimput" class="form-label">Género</label>
-          <input type="text" class="form-control" id="genderimput">
-        </div>
-
-        <div class="mb-3">
-          <label for="ageimput" class="form-label">Edad</label>
-          <input type="text" min="1" max="120" class="form-control" id="ageimput">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Registrar</button>
-      </form>
-    </div>
+      </div>
+    </div> 
     <!--footer-->
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">
