@@ -103,6 +103,8 @@
             </div>        
   
           <button type="submit" class="btn btn-primary">Registrar</button>
+          <a href="buscar.php" class="btn btn-primary">Buscar</a>
+          
           </form>
         </div>
 
