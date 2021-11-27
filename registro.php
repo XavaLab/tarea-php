@@ -5,7 +5,7 @@
 	$sql="SELECT * FROM tabla";
 	$query=mysqli_query($con,$sql);
 
-	$row=mysqli_fetch_array($query);
+	
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +62,13 @@
 
     <!--formulario-->
 
+
 	<div class="container mt-5">
       <div class="row">
 
         <div class="col-md-3">
           <form action="insertar.php" method="POST">
+
             <div class="mb-3">
             <label for="Nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="Nombre" id="Nombre">
@@ -78,10 +80,27 @@
             </div>
             
             <div class="mb-3">
-            <label for="Sexo" class="form-label">Género</label>
-            <input type="text" class="form-control" name="Sexo" id="Sexo">
+                <label for="flexRadioDefault1" class="form-label">Sexo</label> 
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  id="Sexo" name="Sexo" value="Masculino">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Masculino
+                  </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  id="Sexo" name="Sexo" value="Femenino">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Femenino
+                  </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"  id="Sexo" name="Sexo" value="Otro/a">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Otro/a
+                  </label>
+                  </div>
             </div>
-  
+
             <div class="mb-3">
             <label for="Direccion" class="form-label">Dirección</label>
             <input type="text" class="form-control" name="Direccion" id="Direccion">
@@ -136,8 +155,8 @@
 								<th><?php  echo $row['Edad']?></th>
 								<th><?php  echo $row['FNacimiento']?></th>
 								<th><?php  echo $row['RUT']?></th>  
-								<th><a href="actualizar.php?id=<?php echo $row['RUT'] ?>" class="btn btn-info">Editar</a></th>
-								<th><a href="delete.php?id=<?php echo $row['RUT'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+								<th><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>
+								<th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
 							</tr>
 						<?php 
 							}

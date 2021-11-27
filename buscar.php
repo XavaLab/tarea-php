@@ -30,6 +30,9 @@ $con=conectar();
         <input type="text" name="Busqueda">
         <input type="submit" name="enviar" value="Busqueda" class="btn btn-primary">
     </form>
+
+    
+
 </body>
 </html>
 
@@ -41,9 +44,12 @@ if(isset($_GET['enviar'])){
     $consulta = $con->query("SELECT * FROM tabla WHERE Nombre LIKE '$Busqueda'");
 
     while ($row = $consulta->fetch_array()){
-        <th><?php  echo $row['Nombre']?></th>
+        echo $row['Nombre'];
         echo $row['Apellidos'];
         echo $row['RUT'];
+        echo $row['Sexo'];
+        echo $row['Edad'];
+        echo $row['FNacimiento'];
 
     }
 }

@@ -3,9 +3,9 @@
 include("conexion.php");
 $con=conectar();
 
-$RUT=$_GET['id'];
+$id=$_GET['id'];
 
-$sql="DELETE FROM tabla  WHERE RUT='$RUT'";
+$sql="DELETE FROM tabla WHERE id='$id'";
 $query=mysqli_query($con,$sql);
 
     if($query){
