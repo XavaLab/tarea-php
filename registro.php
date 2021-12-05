@@ -63,10 +63,10 @@
     <!--formulario-->
 
 
-	<div class="container mt-5">
+	<div class="container mt-12">
       <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-12">
           <form action="insertar.php" method="POST">
 
             <div class="mb-3">
@@ -102,13 +102,18 @@
             </div>
 
             <div class="mb-3">
+            <label for="email-input" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email-input">
+            </div>
+
+            <div class="mb-3">
+            <label for="password-input" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password-input">
+            </div>
+
+            <div class="mb-3">
             <label for="Direccion" class="form-label">Dirección</label>
             <input type="text" class="form-control" name="Direccion" id="Direccion">
-            </div>
-  
-            <div class="mb-3">
-            <label for="Edad" class="form-label">Edad</label>
-            <input type="number" min="1" max="120" class="form-control" name="Edad" id="Edad">
             </div>
   
             <div class="mb-3">
@@ -126,44 +131,6 @@
           
           </form>
         </div>
-
-		<div class="col-md-8">
-			<table class="table" >
-				<thead class="table-success table-striped" >
-					<tr>
-						<th>Nombre</th>
-						<th>Apellidos</th>
-						<th>Género</th>
-						<th>Dirección</th>
-						<th>Edad</th>
-						<th>Fecha de Nacimiento</th>
-						<th>RUT</th>
-						<th></th>
-						<th></th>
-					</tr>
-				</thead>
-
-				<tbody>
-						<?php
-							while($row=mysqli_fetch_array($query)){
-						?>
-							<tr>
-								<th><?php  echo $row['Nombre']?></th>
-								<th><?php  echo $row['Apellidos']?></th>
-								<th><?php  echo $row['Sexo']?></th>
-								<th><?php  echo $row['Direccion']?></th>
-								<th><?php  echo $row['Edad']?></th>
-								<th><?php  echo $row['FNacimiento']?></th>
-								<th><?php  echo $row['RUT']?></th>  
-								<th><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>
-								<th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
-							</tr>
-						<?php 
-							}
-						?>
-				</tbody>
-			</table>
-		</div>
 
       </div>
     </div> 

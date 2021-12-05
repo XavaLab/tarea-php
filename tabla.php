@@ -1,7 +1,11 @@
 <?php
-include("conexion.php");
-$con=conectar();
+	include("conexion.php");
+	$con=conectar();
 
+	$sql="SELECT * FROM tabla";
+	$query=mysqli_query($con,$sql);
+
+	
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +27,15 @@ $con=conectar();
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
-    <title>Buscar</title>
-</head>
+
+    <title>&#129386 Datos Usuarios</title>
+  </head>
+
 <body>
-    <form action="" method="get">
-        <input type="text" name="Busqueda">
-        <input type="submit" name="enviar" value="Busqueda" class="btn btn-primary">
-    </form>
+    
+    <div style="margin-top:10px"></div>
+    <h1 class="display-1 text-dark text-center">Tabla de Usuarios</h1>
+    <div style="margin-top:10px"></div>
 
     <div class="col-md-12">
 			<table class="table" >
@@ -44,37 +50,30 @@ $con=conectar();
 						<th></th>
 						<th></th>
 					</tr>
-
-                    <?php
-
-if(isset($_GET['enviar'])){
-    $Busqueda = $_GET['Busqueda'];
-
-    $consulta = $con->query("SELECT * FROM tabla WHERE Nombre LIKE '$Busqueda'");
-
-    while ($row = $consulta->fetch_array()){
-        echo $row['Nombre'];
-        echo $row['Apellidos'];
-        echo $row['Sexo'];
-        echo $row['Direccion'];
-        echo $row['FNacimiento'];
-        echo $row['RUT'];
-
-    }
-}
-
-?>
 				</thead>
 
-
+				<tbody>
+						<?php
+							while($row=mysqli_fetch_array($query)){
+						?>
+							<tr>
+								<th><?php  echo $row['Nombre']?></th>
+								<th><?php  echo $row['Apellidos']?></th>
+								<th><?php  echo $row['Sexo']?></th>
+                                <th><?php  echo $row['Direccion']?></th>
+								<th><?php  echo $row['FNacimiento']?></th>
+                                <th><?php  echo $row['RUT']?></th>
+								<th><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>
+								<th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+							</tr>
+						<?php 
+							}
+						?>
+				</tbody>
 			</table>
 		</div>
 
 </body>
-
-</html>
-
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
