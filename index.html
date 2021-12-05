@@ -17,34 +17,31 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
-    
 
-    <title>&#129386 Bienvenido a Comida Facilita</title>
+    <title>&#129386 Formulario</title>
   </head>
   <body>
-  
-
-
-  <!--NAVBAR-->
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-      Comida Facilita
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.html">Home 🏠</a>
-          <a class="nav-link" href="#">Contacto ☎</a>
-          <a class="nav-link" href="formulario.html">Login ✍</a>
-          <a class="nav-link" href="nosotros.html">Nosotros 🍽</a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        Comida Facilita
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="formulario.html">Login ✍</a>
+            <a class="nav-link" href="#">Contacto ☎</a>
+            <a class="nav-link" href="index.html">Home 🏠</a>
+            <a class="nav-link" href="nosotros.html">Nosotros 🍽</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+
 
   <!--Seccion-->
   <div class="container-fluid p-5 bg-primary text-white text-center bg-info bg-opacity-90">
@@ -52,63 +49,37 @@
         <p class="fw-bolder text-white-50 fs-5">Cómete el mundo</p> 
   </div>
 
-  <!--Cards-->
-    <div class="card-group">
-      <div class="card">
-        <img src="img/fideos.jpg" class="card-img-top" height="275px" width="200px" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Fideos con salsa</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ut ratione voluptatem tempore nulla provident quis in pariatur deleniti esse aspernatur consectetur nobis inventore, a laboriosam fuga illo? Porro, quas odio.</p>
+
+    <!--formulario-->
+
+    <div class="container-sm">
+      <form class="form-horizontal" action="registro.php">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">No compartas tu correo con cualquiera.</div>
         </div>
-
-      </div>
-      <div class="card">
-        <img src="img/MARUCHAN.jpg" height="275px" class="card-img-top" width="200px" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Maruchan</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima, mollitia molestiae consequuntur explicabo reiciendis ea a debitis ad, assumenda possimus laboriosam. Libero dicta, et mollitia, tempore deleniti cumque eveniet.</p>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-
-      </div>
-      <div class="card">
-        <img src="img/hotdog.png" height="275px" class="card-img-top" width="200" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Hot-Dog</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox"> Recuérdame</label>
+            </div>
+          </div>
         </div>
-
-      </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" class="btn btn-success">Ingrese</button>
+            <button type="submit" class="btn btn-success">Crear Cuenta</button>
+          </div>
+        </div>
+      </form>
     </div>
-  <!--CARRUSEL-->
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/Diapositiva1.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/Diapositiva2.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/Diapositiva3.PNG" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
- <!--footer-->
+<!--footer-->
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">
 
@@ -184,6 +155,8 @@
     
   </div>
   <!-- End of .container -->
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

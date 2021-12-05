@@ -2,6 +2,7 @@
 /////// CONEXIÓN A LA BASE DE DATOS /////////
     include("conexion.php");
     $con=conectar();
+    
 if ($con -> connect_errno)
 {
 	die("Fallo la conexion:(".$con -> mysqli_connect_errno().")".$con-> mysqli_connect_error());
